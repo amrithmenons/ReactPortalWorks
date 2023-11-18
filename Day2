@@ -1,0 +1,222 @@
+Problem1:
+Hello World
+App.js
+Import React from “react”;
+function app()
+{
+return(
+<h1>Hello World<h1>
+)
+};
+export default app()
+
+
+
+ 
+Problem2: 
+Pass or Fail using functions
+
+App.js
+Import PassMessage from ‘./PassMessage’;
+Import FailMessage from ’/FailMessage’;
+function app(props)
+{
+    const isPass=Props.isPass
+    If(isPass)
+   {
+    return <PassMessage>
+    }
+    return<FailMessage>
+}
+export default app()
+this code should be written in app.js
+
+FailMessage.js
+import React from "react"
+import App from "./App"
+function FailMessage()
+{
+    return(
+        <div>
+            <h1 style={
+                {
+                    textAlign: 'center', 
+                    color: 'red'
+                }
+            }>Better Luck Next Time</h1>
+        </div>
+    )
+}
+export default FailMessage
+
+
+PassMessage.js
+import React from "react"
+import App from "./App"
+function PassMessage()
+{
+    return(
+        <div>
+            <h1 style={
+                {
+                    textAlign: 'center', 
+                    color: 'green'
+                }
+            }>You passed the test.</h1>
+        </div>
+    )
+}
+export default PassMessage
+
+
+  
+Problem 3
+Forms
+App.js
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div>
+      <form>
+        <label htmlFor="name"><h4>NAME:</h4></label>
+        <input type='text' id='name' placeholder='Enter your name' />
+
+        <label htmlFor="password"><h4>PASSWORD:</h4></label>
+        <input type='password' id='password' placeholder='Enter your password' />
+ 
+        <label htmlFor="age"><h4>AGE:</h4></label>
+        <input type='date' id='age' />
+
+        <label><h4>SELECT YOUR GENDER:</h4></label>
+        <input type='radio' name='gender' value='Male' /> Male
+        <input type='radio' name='gender' value='Female' /> Female
+        <br/>
+
+        <button type='submit' id='but'>Submit</button>
+      </form>
+    </div>
+  );
+}
+
+export default App;
+
+
+Css
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(171, 255, 3);
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh; 
+  color:inherit;
+  display: flex;
+}
+
+#but {
+  background-color: rgb(5, 13, 255);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor:grab;
+  margin-top: 10px;
+  font-style: normal;
+}
+
+.logincontainer {
+  background-color: rgb(229, 233, 236);
+  width: max-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  color: black;
+  margin: 0 auto; 
+}
+
+
+  
+Problem 4: 
+Pass Message
+App.js
+import React from 'react'
+import PassMessage from './PassMessage'
+class App extends React.Component{
+  render()
+  {
+    return(
+      <PassMessage/>
+    );
+  }
+}
+export default App;
+
+PassMessage.js
+import React from 'react'
+import PassMessage from './PassMessage'
+class Pass extends React.Component{
+  render()
+  {
+    return(
+      <h1>You have Passed</h1>
+    );
+  }
+}
+export default Pass	
+ 
+
+
+
+
+
+
+
