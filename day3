@@ -1,0 +1,172 @@
+Problem 1
+Pass or Fail Using Classes
+App.js
+import PassMessage from './PassMessage'
+import FailMessage from './FailMessage'
+function App (props) 
+{
+    const isPass = props.isPass; 
+    if (isPass) 
+    { // Use "if" instead of "If"
+      return <PassMessage />;
+    }
+    return <FailMessage />;
+}
+export default App;
+
+
+
+PassMessage.js
+import React from 'react'
+class PassMessage extends React.Component{
+  render()
+  {
+    return(
+      <h1>You have Passed</h1>
+    );
+  }
+}
+export default PassMessage
+
+
+
+FailMessage.js
+import React from 'react';
+class FailMessage extends React.Component {
+  render() {
+    return (
+      <h1>You have Miserably Failed</h1>
+    );
+  }
+}
+
+export default FailMessage;
+
+
+
+Index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+ReactDOM.render(<App isPass={false}/>,
+    document.getElementById('root'));
+
+ 
+
+
+
+ 
+Problem 2
+Both pass and Fail 
+App.js
+import React from 'react';
+import PassMessage from './PassMessage';
+import FailMessage from './FailMessage';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <PassMessage />
+        <FailMessage />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+PassMessage.js
+
+import React from 'react';
+
+class PassMessage extends React.Component {
+  render() {
+    return (
+      <h1>You have Passed</h1>
+    );
+  }
+}
+
+export default PassMessage;
+
+
+FailMessage.js
+
+import React from 'react';
+class FailMessage extends React.Component {
+  render() {
+    return (
+      <h1>You have Miserably Failed</h1>
+    );
+  }
+}
+
+export default FailMessage;
+
+
+
+
+
+
+Problem 3
+Change statement when clicked
+App.js
+import React from 'react';
+import PassMessage from './PassMessage';
+import FailMessage from './FailMessage';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <FailMessage />
+
+        <PassMessage />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+PassMessage.js
+import React from 'react'
+class PassMessage extends React.Component{
+
+    constructor()
+    {
+        super()
+        this.state={
+            message:'WELCOME VISITOR'
+        }
+    }
+
+    changeMessage()
+    {
+        this.setState(
+            {
+                message:'thankyou for Subscribing'
+            }
+        )
+    }
+  render()
+  {
+    return(
+      <div>
+        <h1>{this.state.message}</h1>
+        <button onClick={()=>this.changeMessage()}>Subscribe</button>   
+      </div>
+    );
+  }
+}
+export default PassMessage
+
+
+ 
+
+
+
+
+
