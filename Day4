@@ -1,0 +1,237 @@
+1.MapList:
+App.js:
+
+import React from "react";
+const Renderinglist=()=>
+{
+  const fruits = [{id:1, name:"apple"},{id:2, name:"orange"}]
+  return
+(
+    <div>
+      <ul>
+        {
+          fruits.map((fruit,index)=>
+ (
+          <li>{fruit.name}</li>
+        )
+)
+}
+      </ul>
+    </div>
+  )
+}
+export default Renderinglist
+
+
+ 
+2.List coloring tag:
+App.js
+
+import React from "react";
+const Renderinglist=()=>{
+  
+const fruits = [{id:1, name:"apple"},{id:2, name:"orange"}]
+ const style={ color:'red' }
+  return
+(
+    <div>
+      <ul>
+        {
+          fruits.map((fruit,index)=>(
+          <li style={style}>{fruit.name}</li>
+        )
+)
+}
+      </ul>
+    </div>
+  )
+}
+export default Renderinglist
+
+
+ 
+3.Styled button:
+ App.js:
+
+import React from "react";
+import StyledButton from "./components/styledbutton";
+function App()
+{
+  return
+ (
+    <div>
+     <StyledButton>Login</StyledButton>
+    </div>
+  )
+}
+export default App
+
+styled.js:
+import React from "react";
+import Styled from "styled-components";
+
+const Styled = styled.button
+`
+  color: red;
+  background-color: lightblue;  &:hover;
+{
+    background-color:blue;
+    color:yellow;
+ }
+`
+export default Styled;
+
+
+ 
+4.Header and Footer:
+App.js:
+import React from "react";
+import StyledButton from "./components/styledbutton";
+import './App.css'
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+function App()
+{
+  return(
+    <div>
+     <Header/>
+     <Footer/>
+    </div>
+  )
+}
+export default App
+
+Header.js:
+import React from 'react'
+
+const Header = () => {
+  
+return (
+    <div>Header</div>
+  )
+}
+
+export default Header
+
+Footer.js:
+import React from 'react'
+const Footer = () => {
+  return (
+    <div>Footer</div>
+  )
+}
+
+export default Footer 
+4. Muielements
+
+App.js:
+import React from "react";
+
+import Muisample from "./components/Muisample";
+import Muisamp from "./components/Muisample2"
+import Button from '@mui/material/Button';
+function App() {
+  return (
+      <div>
+        <h2>Enter your name favourite fruit</h2>
+        <Muisample/>
+        <Muisamp/>
+        <br></br>
+        <Button variant="contained">Submit</Button>
+      </div>
+  )
+}
+
+export default App
+
+Muisample.js:
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
+export default function BasicTextFields() {
+  return (
+
+    <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '28ch' },
+      }
+}
+      noValidate
+      autoComplete="off"
+    >
+      
+      <TextField id="standard-basic" label="Name" variant="standard" />
+    </Box>
+  );
+}
+
+Muisamp.js:
+
+import * as React from 'react';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+
+export default function ComboBox() {
+  return (
+    
+<Autocomplete
+      disablePortal
+      id="combo-box-demo"
+      options={fruits}
+      sx={{ width: 320 }}
+      renderInput={(params) => <TextField {...params} label="Choose a fruit"/>}
+    />
+  );
+}
+
+const fruits = [
+  { label: 'Apple'},
+  { label: 'Banana'},
+  { label: 'Orange'},
+  { label: 'Grapes'},
+  { label: 'Strawberry'},
+  ];
+ 
+1.Header and Footer
+App.js:
+
+import React from "react";
+import StyledButton from "./components/styledbutton";
+import './App.css'
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+function App()
+{
+  return(
+    <div>
+     <Header/>
+     <Footer/>
+    </div>
+  )
+}
+export default App
+
+Header.js:
+import React from 'react'
+const Header = () => {
+  return (
+    <div>Header</div>
+  )
+}
+
+export default Header
+
+Footer.js:
+import React from 'react'
+const Footer = () => {
+  return (
+    <div>Footer</div>
+  )
+}
+
+export default Footer
+
+OUTPUT:
+
