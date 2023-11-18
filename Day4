@@ -122,8 +122,9 @@ const Footer = () => {
 }
 
 export default Footer 
-4. Muielements
 
+
+4. Muielements
 App.js:
 import React from "react";
 
@@ -193,7 +194,8 @@ const fruits = [
   { label: 'Grapes'},
   { label: 'Strawberry'},
   ];
- 
+
+
 1.Header and Footer
 App.js:
 
