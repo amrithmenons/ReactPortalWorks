@@ -1,0 +1,54 @@
+Problem1: 
+Pass or Fail using functions
+
+App.js
+Import PassMessage from ‘./PassMessage’;
+Import FailMessage from ’/FailMessage’;
+function app(props)
+{
+    const isPass=Props.isPass
+    If(isPass)
+   {
+    return <PassMessage>
+    }
+    return<FailMessage>
+}
+export default app()
+this code should be written in app.js
+
+FailMessage.js
+import React from "react"
+import App from "./App"
+function FailMessage()
+{
+    return(
+        <div>
+            <h1 style={
+                {
+                    textAlign: 'center', 
+                    color: 'red'
+                }
+            }>Better Luck Next Time</h1>
+        </div>
+    )
+}
+export default FailMessage
+
+
+PassMessage.js
+import React from "react"
+import App from "./App"
+function PassMessage()
+{
+    return(
+        <div>
+            <h1 style={
+                {
+                    textAlign: 'center', 
+                    color: 'green'
+                }
+            }>You passed the test.</h1>
+        </div>
+    )
+}
+export default PassMessage
